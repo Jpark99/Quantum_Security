@@ -82,7 +82,7 @@ def run_bb84(seed, n, eve):
 
 def bb84_protocol():
     seed = randint(9949)
-    size = 100
+    size = 300
     eve_intercepts = False
     return run_bb84(seed, size, eve_intercepts)
 
