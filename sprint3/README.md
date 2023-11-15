@@ -8,6 +8,6 @@ So far, we have implemented the BB84 Quantum Key Distribution protocol for key g
 
 ## Next steps
 
-Once we have built a symmetric encryption structure using QKD, our goal is to integrate it within some specific application.
+Once we have built a symmetric encryption structure using QKD, our goal is to integrate it within some specific application. This could be, for instance, building our small secure communication channel between two computers.
 
 
