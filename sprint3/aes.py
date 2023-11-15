@@ -26,17 +26,3 @@ def aes_decrypt(ciphertext, key):
     original_message = unpadder.update(decrypted_message) + unpadder.finalize()
 
     return original_message
-
-def adjust_key_size(key):
-    # Adjust key size to 256 bits
-    n_bits = len(key)
-    if n_bits < 256:
-        adjusted_key = list(key)
-        for i in range((256//n_bits) - 1):
-            adjusted_key += key
-        adjusted_key += key[:256-len(adjusted_key)]
-    elif n_bits > 256:
-        adjusted_key = key[0:256]
-    else:
-        adjusted_key = key
-    return adjusted_key
