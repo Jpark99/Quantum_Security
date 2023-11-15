@@ -5,12 +5,10 @@ import aes
 
 if __name__=="__main__":
     quantum_key = bb84_protocol()
+    print(len(quantum_key))
     if quantum_key == None:
         raise ValueError("The key could not be generated due to an attemp of interception")
-    
-    # Adjust key size to 256 bits
-    quantum_key = aes.adjust_key_size(quantum_key)
-    
+      
     # Convert the quantum key to bytes for AES encryption
     quantum_key_bytes = bytes((sum(b << i for i, b in enumerate(reversed(byte))) for byte in [quantum_key[i:i+8] for i in range(0, len(quantum_key), 8)]))   
         
