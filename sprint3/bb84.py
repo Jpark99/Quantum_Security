@@ -46,7 +46,19 @@ def remove_bits(alice_bases, bob_bases, bits, n):
             final_bits.append(bits[q])
     return final_bits
 
-def run_bb84(seed, n, eve):
+def sample_bits(bits, selection):
+    sample = []
+    for i in selection:
+        # use np.mod to make sure the
+        # bit we sample is always in 
+        # the list range
+        i = np.mod(i, len(bits))
+        # pop(i) removes the element of the
+        # list at index 'i'
+        sample.append(bits.pop(i))
+    return sample
+
+def run_bb84(seed, n, sample, eve):
     np.random.seed(seed=seed)
 
     ## Step 1
@@ -69,22 +81,30 @@ def run_bb84(seed, n, eve):
     bob_bits = measure_key(key, bob_bases, n)
     
     ## Step 4
-    # Clean and check keys
+    # Clean keys
     alice_key = remove_bits(alice_bases, bob_bases, alice_bits, n)
     bob_key = remove_bits(alice_bases, bob_bases, bob_bits, n)
-    print("alice_key = ",alice_key)
-    print("bob_key = ", bob_key)
-    print("Successful key generation: ", alice_key == bob_key)
-    if alice_key == bob_key:
-        return alice_key
+
+    ## Step 5
+    # Sample keys to get only 256 bits
+    bit_selection = randint(n, size=sample)
+
+    bob_sample = sample_bits(bob_key, bit_selection)
+    alice_sample = sample_bits(alice_key, bit_selection)
+    print("alice_key = ",alice_sample)
+    print("bob_key = ", bob_sample)
+    print("Successful key generation: ", alice_sample == bob_sample)
+    if alice_sample == bob_sample:
+        return alice_sample
     return None
 
 
 def bb84_protocol():
     seed = randint(9949)
-    size = 300
+    size = 600
+    sample = 256
     eve_intercepts = False
-    return run_bb84(seed, size, eve_intercepts)
+    return run_bb84(seed, size, sample, eve_intercepts)
 
 
 if __name__=="__main__":
