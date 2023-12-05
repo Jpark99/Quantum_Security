@@ -5,7 +5,6 @@ import aes
 
 if __name__=="__main__":
     quantum_key = bb84_protocol()
-    print(len(quantum_key))
     if quantum_key == None:
         raise ValueError("The key could not be generated due to an attemp of interception")
       
