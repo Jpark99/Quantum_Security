@@ -1,5 +1,9 @@
 # Copyright 2023 Jiwon Park, Inigo Perez Gamiz
-# kyber imported: MIT License, Copyright (c) 2022 Giacomo Pope
+
+"""
+kyber imported from repository https://github.com/GiacomoPope/kyber-py
+MIT License, Copyright (c) 2022 Giacomo Pope
+"""
 
 import socket
 import aes
