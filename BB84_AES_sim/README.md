@@ -1,4 +1,4 @@
-# COMMUNICATION PROTOCOL SIMULATOR WITH BB84 AND AES
+# Communication Protocol Simulator with BB84 and AES
 Based on https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms/quantum-key-distribution.ipynb
 
 # Product mission
