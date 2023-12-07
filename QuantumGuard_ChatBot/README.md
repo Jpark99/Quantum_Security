@@ -28,21 +28,21 @@ _(source: [Deep dive into a post-quantum key encapsulation algorithm](https://bl
 ## AES Encryption
 AES is a classical symmetric method for the encryption of data. It requires a shared private key between the sender and the receiver to encrypt and decrypt data. AES is resistant against quantum computers, since Grover's algorithm only presents a square-root speedup over classical brute force algorithm to force keys. In this product, the key used for AES is the one generated using Kyber.
 
-## ChatBot's Responses
-## Guide
+## Usage Guide
 
-- Clone the repository:
+How to clone the repository:
 ```bash
 git clone https://github.com/Jpark99/Quantum_Security/
 ```
 
-- Install dependencies:
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-- Replace "YOUR-OPENAI-API-KEY" in server.py with your OpenAI API key
+Replace "YOUR-OPENAI-API-KEY" in server.py with your OpenAI API key
 
+To run the ChatBot, open two command line terminals. In one of them, run the program 
 - Run Server:
 ```bash
 python server.py
