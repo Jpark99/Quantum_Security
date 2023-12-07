@@ -6,8 +6,6 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 
 ## Features
 
-- **Client-Server Connection:** Establish a connection between the user and the QuantumGuard ChatBot server
-
 - **Shared Key Generation:** Utilize the Kyber512 encapsulation method to generate shared keys, ensuring a robust encryption foundation based on the Learning With Errors (LWE) lattice problem
 
 - **AES Encryption:** Encrypt and decrypt messages using the generated key through the Advanced Encryption Standard (AES)
@@ -28,4 +26,15 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 
 - To learn more about Kyber or PQ-KEM, take a look here: https://blog.cloudflare.com/post-quantum-key-encapsulation/
 
+## Guide
 
+- Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+- Run Server:
+```bash
+python server.py
+```
+- Run Client:
+  
