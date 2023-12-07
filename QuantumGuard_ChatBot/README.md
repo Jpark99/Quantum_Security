@@ -28,6 +28,11 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 
 ## Guide
 
+- Clone the repository:
+```bash
+git clone https://github.com/Jpark99/Quantum_Security/
+```
+
 - Install dependencies:
 ```bash
 pip install -r requirements.txt
