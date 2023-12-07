@@ -40,24 +40,20 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Replace "YOUR-OPENAI-API-KEY" in server.py with your OpenAI API key
+Before runing the program, replace "YOUR-OPENAI-API-KEY" in server.py with your OpenAI API key.
 
-To run the ChatBot, open two command line terminals. In one of them, run the program 
-- Run Server:
+To run the ChatBot, open two command line terminals. In one of them, run the program <code style="color : greenyellow">server.py</code>:
 ```bash
 python server.py
 ```
-
-- Run Client:
+In the other terminal, run <code style="color : greenyellow">client.py</code>:
 ```bash
 python client.py
 ```
 
-- In terminal, you'll see if the shared key has been successfully generated.
+In terminal, you will see if the shared key was successfully generated. In case it was, start chatting!
 
-- Get talking!
-
-- To exit, simply type in "exit"
+To exit, simply type in "exit" or "Exit".
 
 ## Example
 
