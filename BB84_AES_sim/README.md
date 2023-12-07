@@ -33,7 +33,10 @@ The remaining information becomes their secret key, which can be used for secure
 - **Secure Communication:**<br/>
 Alice and Bob now use this secret key for encrypting and decrypting messages, ensuring secure communication.
 
-![image](https://github.com/Jpark99/Quantum_Security/assets/10427379/257c7751-839a-42ac-a252-b19378e0b12f)
+<a data-flickr-embed="true" data-header="true"  href="https://www.researchgate.net/figure/Key-exchange-in-the-BB84-protocol-implemented-with-polarization-of-photons-adapted-from_fig1_324115273" title=""><img src="https://github.com/Jpark99/Quantum_Security/assets/10427379/257c7751-839a-42ac-a252-b19378e0b12f" width="320" height="213" alt="Caught in the App LONDON"></a>
+
+ _(source: [The Impact of Quantum Computing on Present Cryptography](https://www.flickr.com/photos/ritzotencate/albums/72157689617769444) by Kamer Vishi on ResearchGate_
+
 
 
 ## Guide
