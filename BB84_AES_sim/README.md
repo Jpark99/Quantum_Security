@@ -7,8 +7,16 @@ Simulator intended for the secure transmission of data between two parties. Init
 
 ## Key generation: BB84 Quantum Key Distribution protocol
 
-Quantum Key Distribution is a secure communication protocol that aims to generate a shared private key between two parties (Alice and Bob). It is particularly interesting because it relies on the laws of Quantum Mechanics, specially on two main principles: the disturbance by measurement and the no-cloning theorem. If a third party (Eve) tries to intercept the key while it is being generated, by the no-cloning theorem she will not be able to copy the state of the key. The only way she has to get information about the key is measuring and, consequently, disturbing it. As a result, Alice and Bob will be able to detect the attack.
+Quantum Key Distribution (QKD) is a secure communication protocol that aims to generate a shared private key between two parties (Alice and Bob). It is particularly interesting because it relies on the laws of Quantum Mechanics, specially on two main principles: the disturbance by measurement and the no-cloning theorem. If a third party (Eve) tries to intercept the key while it is being generated, by the no-cloning theorem, she will not be able to copy the state of the key. The only way she has to get information about the key is measuring and, consequently, disturbing it. As a result, Alice and Bob will be able to detect the attack.
 
+There are different QKD protocol. One of them is the BB84, the one we use for our project. The protocol is physically implemented using photons and works as follows:
+
+1. Alice initially generates a random string of bits and encodes each bit as a qubit with the Z-basis (rectilinear, {|0>, |1>}) or the X-basis (diagonal, {|+>, |->}). Each qubit is represented using a polarized photon. For example, an initial bit 0 encoded in X-basis, will be the state |+> encoded, and physically a photon polarized 45º. Once all the qubits are prepared, they are sent to Bob through a quantum channel.
+2. Bob receives the qubits and chooses one of the two mentioned basis (Z-basis or X-basis) to measure each of them. If the chosen basis is the same as Alice’s, then he will get the right bit. Otherwise, the result of the measure will be random. Physically, this consists on trying to detect the polarized photons placing a filter either horizontal/vertical (Z-basis) or diagonal (X-basis).
+3. Once all the bits are measured, Alice and Bob share through the classical channel which basis did they use for each bit of the key, and discard the bits for which they did not agree.
+4. Finally, they check if the remainig bits that they have are the same. In case they did not, they know that somebody attempted to intercept the key and they discard the key generation.
+
+In a real world scenario (not a simulator), Alice and Bob would carry on the so called information reconciliation and privacy amplification to fix errors derived from noise in the quantum channel and other attemps of eavesdropping.
 - **Photon Preparation:**<br/>
 Alice sends particles of light (photons) to Bob.
 
