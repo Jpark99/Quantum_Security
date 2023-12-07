@@ -2,53 +2,35 @@
 
 Based on https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms/quantum-key-distribution.ipynb
 
-# Description
+## Description
 Simulator intended for the secure transmission of data between two parties. Initially, a private shared key is generated using the BB84 Quantum Key Distribution protocol. This key is later used to encrypt and decrypt data during its transmission. The communication protocol is intended only for quantum computers, and a quantum channel is necessary for an actual physical implementation.
 
 ## Key generation: BB84 Quantum Key Distribution protocol
 
-Quantum Key Distribution (QKD) is a secure communication protocol that aims to generate a shared private key between two parties (Alice and Bob). It is particularly interesting because it relies on the laws of Quantum Mechanics, specially on two main principles: the disturbance by measurement and the no-cloning theorem. If a third party (Eve) tries to intercept the key while it is being generated, by the no-cloning theorem, she will not be able to copy the state of the key. The only way she has to get information about the key is measuring and, consequently, disturbing it. As a result, Alice and Bob will be able to detect the attack.
+Quantum Key Distribution (QKD) is a secure communication protocol that aims to generate a shared private key between two parties (Alice and Bob). It is particularly interesting because it relies on the laws of Quantum Mechanics, specially on two main principles: the disturbance by measurement and the no-cloning theorem. If a third party (Eve) tries to intercept the key while it is being generated, by the no-cloning theorem, she will not be able to copy the state of the key. The only way she has to get information about the key is measuring and, consequently, disturbing it. As a result, Alice and Bob will be able to detect the attack. The BB84 protocol is a resistant key generation method for quantum computers.
 
 There are different QKD protocol. One of them is the BB84, the one we use for our project. The protocol is physically implemented using photons and works as follows:
 
 1. Alice initially generates a random string of bits and encodes each bit as a qubit with the Z-basis (rectilinear, {|0>, |1>}) or the X-basis (diagonal, {|+>, |->}). Each qubit is represented using a polarized photon. For example, an initial bit 0 encoded in X-basis, will be the state |+> encoded, and physically a photon polarized 45º. Once all the qubits are prepared, they are sent to Bob through a quantum channel.
 2. Bob receives the qubits and chooses one of the two mentioned basis (Z-basis or X-basis) to measure each of them. If the chosen basis is the same as Alice’s, then he will get the right bit. Otherwise, the result of the measure will be random. Physically, this consists on trying to detect the polarized photons placing a filter either horizontal/vertical (Z-basis) or diagonal (X-basis).
 3. Once all the bits are measured, Alice and Bob share through the classical channel which basis did they use for each bit of the key, and discard the bits for which they did not agree.
-4. Finally, they check if the remainig bits that they have are the same. In case they did not, they know that somebody attempted to intercept the key and they discard the key generation.
+4. Finally, they check if the remainig bits that they have are the same. If they are equal, they constitute the final shared key. In case they did not, they know that somebody attempted to intercept the key and they discard the key generation.
 
-In a real world scenario (not a simulator), Alice and Bob would carry on the so called information reconciliation and privacy amplification to fix errors derived from noise in the quantum channel and other attemps of eavesdropping.
-- **Photon Preparation:**<br/>
-Alice sends particles of light (photons) to Bob.
-
-- **Quantum Transmission:**<br/>
-Each photon carries a special property, like polarization, which represents a bit of information.
-
-- **Photon Measurement:**<br/>
-Bob measures the polarization of each received photon.
-
-- **Public Communication:**<br/>
-Bob tells Alice, through a regular communication channel, which polarization he measured for each photon.
-
-- **Error Detection:**<br/>
-Alice and Bob compare a few photons to check for any discrepancies. If there are errors, it may indicate eavesdropping.
-
-- **Error Correction:**<br/>
-If errors are detected, Alice and Bob abort and try again.
-
-- **Privacy Amplification:**<br/>
-They sample the shared information to create a shorter, more secure key.
-
-- **Secret Key Generation:**<br/>
-The remaining information becomes their secret key, which can be used for secure communication.
-
-- **Secure Communication:**<br/>
-Alice and Bob now use this secret key for encrypting and decrypting messages, ensuring secure communication.
-
-<a data-flickr-embed="true" data-header="true"  href="https://www.researchgate.net/figure/Key-exchange-in-the-BB84-protocol-implemented-with-polarization-of-photons-adapted-from_fig1_324115273" title=""><img src="https://github.com/Jpark99/Quantum_Security/assets/10427379/257c7751-839a-42ac-a252-b19378e0b12f" width="320" height="213" alt="Caught in the App LONDON"></a>
-
- _(source: [The Impact of Quantum Computing on Present Cryptography](https://www.researchgate.net/figure/Key-exchange-in-the-BB84-protocol-implemented-with-polarization-of-photons-adapted-from_fig1_324115273) by Kamer Vishi on ResearchGate_
+In a real world scenario (not a simulator), Alice and Bob would carry on the so called information reconciliation and privacy amplification to fix errors derived from noise in the quantum channel and other attemps of eavesdropping. 
+In our program, we sample the final key to 256-bits to have the required length to be used for the AES encryption algorithm.
 
 
+<p align="center">
+  <a data-flickr-embed="true" data-header="true" href="https://www.researchgate.net/figure/Key-exchange-in-the-BB84-protocol-implemented-with-polarization-of-photons-adapted-from_fig1_324115273" title="">
+    <img src="https://github.com/Jpark99/Quantum_Security/assets/10427379/257c7751-839a-42ac-a252-b19378e0b12f" width="400" height="260" alt="Caught in the App LONDON">
+  </a>
+</p>
+
+_(source: [The Impact of Quantum Computing on Present Cryptography](https://www.researchgate.net/figure/Key-exchange-in-the-BB84-protocol-implemented-with-polarization-of-photons-adapted-from_fig1_324115273) by Kamer Vishi on ResearchGate)_
+
+
+## AES encryption method
+AES is a classical symmetric method for the encryption of data. It requires a shared private key between the sender and the receiver to encrypt and decrypt data. In our case, we use the key generated by the BB84 protocol.
 
 ## Guide
 
