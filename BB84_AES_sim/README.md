@@ -35,3 +35,6 @@ Alice and Bob now use this secret key for encrypting and decrypting messages, en
 
 ![image](https://github.com/Jpark99/Quantum_Security/assets/10427379/257c7751-839a-42ac-a252-b19378e0b12f)
 
+
+## Guide
+
