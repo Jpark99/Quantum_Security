@@ -1,4 +1,4 @@
-# Jiwon Park, Inigo Perez Gamiz
+# Copyright Jiwon Park, Inigo Perez Gamiz
 
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
