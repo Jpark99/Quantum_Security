@@ -8,7 +8,7 @@ for years have been considered to be safe against classical computers, now confr
 In this context, our project proposes 2 safe solutions against quantum computers:
 
 - **Communication protocol simulator based on BB84 and AES:** robust simulator for the secure transmission of data between two parties. A shared key is generated using the BB84 Quantum Key Distribution protocol, and this key is later used to encrypt and decrypt data with the symmetric AES method.
-- **QuantumGuard Chatbot: Next-Gen Encrypted Messaging with Kyber and ChatGPT**: 
+- **QuantumGuard Chatbot: Next-Gen Encrypted Messaging with Kyber and ChatGPT**: innovative chatbot implementation that leverages the power of Kyber512 encapsulation and ChatGPT for a next-generation encrypted communication experience. The chatbot is an application of the cybersecurity system; it could be applied in other contexts.
 
 
 ## Product Mission
