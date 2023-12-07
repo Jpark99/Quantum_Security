@@ -32,9 +32,22 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 ```bash
 pip install -r requirements.txt
 ```
+
+- Replace "YOUR-OPENAI-API-KEY" in server.py with your OpenAI API key
+
 - Run Server:
 ```bash
 python server.py
 ```
+
 - Run Client:
+```bash
+python client.py
+```
+
+- In terminal, you'll see if the shared key has been successfully generated.
+
+- Get talking!
+
+- To exit, simply type in "exit"
   
