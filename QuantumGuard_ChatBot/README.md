@@ -11,7 +11,7 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 
 - **ChatBot's Responses:** ChatBot's responses are generated using the OpenAI API.
 
-## Key generation: Kyber512
+## Key Generation: Kyber512
 
 The key is generated using Kyber512 asymmetric (or public-key) method. The steps are the following:
 
@@ -25,8 +25,10 @@ Kyber is a Post-Quantum Key Encapsualtion Method (PQ-KEM), resistant to quantum 
 
 _(source: [Deep dive into a post-quantum key encapsulation algorithm](https://blog.cloudflare.com/post-quantum-key-encapsulation/) by Goutam Tamvada and Sofía Celi on The Cloudflare Blog)_
 
-## 
+## AES Encryption
+AES is a classical symmetric method for the encryption of data. It requires a shared private key between the sender and the receiver to encrypt and decrypt data. AES is resistant against quantum computers, since Grover's algorithm only presents a square-root speedup over classical brute force algorithm to force keys. In this product, the key used for AES is the one generated using Kyber.
 
+## ChatBot's Responses
 ## Guide
 
 - Clone the repository:
