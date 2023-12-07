@@ -43,5 +43,8 @@ The simulator is made of three files: <code style="color : greenyellow">bb84.py<
 Here are some results obtained from running the simulator.
 
 1. Successful transmission of data: private key generated between sender and receiver, and encryption and decrytion of data using this key.
-! 
+![suc](https://github.com/Jpark99/Quantum_Security/assets/144547977/7d6586f9-6835-414f-bb99-49bb39833a39)
+
 2. Unsuccesful key generation due to an attempt of interception.
+![unsuc](https://github.com/Jpark99/Quantum_Security/assets/144547977/2bd5ee4a-7383-497b-bded-9238f8ffc8bf)
+
