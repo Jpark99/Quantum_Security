@@ -22,9 +22,9 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 
 - A simple look at KEM:
     - Alice runs KeyGen() and generates a public and private key. Alice posts the public key, and keeps the privat key to herself
-    - Bob takes Alice's public key and runs encapsulation, getting a shared key and a ciphertext
+    - Bob takes Alice's public key and runs Encapsulation(), getting a shared key and a ciphertext
     - Bob keeps the shared key to himself and sends the ciphertext to Alice
-    - Alice runs decapsulation on the ciphertext with her private key gets the shared key
+    - Alice runs Decapsulation() on the ciphertext with her private key gets the shared key
     - Now Alice and Bob have the same shared key
 
 ![image](https://github.com/Jpark99/Quantum_Security/assets/10427379/00cd9bf7-794d-424d-a32a-e14660a7c50f)
