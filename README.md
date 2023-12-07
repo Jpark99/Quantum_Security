@@ -18,3 +18,11 @@ Make cybersecurity professionals aware of the risk that quantum computers suppos
 7. I, cybersecurity engineer, want a way to contact a support team in case there were issues. <code style="color : greenyellow">Now</code>
 8. I, cybersecurity enthusiast, want an open source code of the encryption methods to have the chance to study them and potentially contribute to their improvement. <code style="color : greenyellow">Later</code>
 
+## Further Information
+For additional information about the products, please refer to the respective README files for each of them.
+![Alt text](https://github.com/Jpark99/Quantum_Security/blob/main/BB84_AES_sim/README.md)
+![Alt text](https://github.com/Jpark99/Quantum_Security/blob/main/QuantumGuard_ChatBot/README.md)
+
+## Contact support
+Jiwon Park: jiwon327@bu.edu
+Inigo Perez Gamiz: iperezg@bu.edu
