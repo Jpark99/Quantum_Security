@@ -1,6 +1,6 @@
 <h1 align="center"> Communication Protocol Simulator based on BB84 and AES </h1>
 
-Based on https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms/quantum-key-distribution.ipynb
+Based on 
 
 ## Description
 Simulator intended for the secure transmission of data between two parties. Initially, a private shared key is generated using the BB84 Quantum Key Distribution protocol. This key is later used to encrypt and decrypt data during its transmission. The communication protocol is intended only for quantum computers, and a quantum channel is necessary for an actual physical implementation.
@@ -34,3 +34,9 @@ AES is a classical symmetric method for the encryption of data. It requires a sh
 
 ## Usage Guide
 The simulator is made of three files: <code style="color : greenyellow">bb84.py</code>, <code style="color : greenyellow">aes.py</code> and <code style="color : greenyellow">main.py</code>.
+
+<code style="color : greenyellow">bb84.py</code> contains the code corresponding to the private shared key generation. It is based on [Qiskit Texbook's implementation of BB84](https://github.com/Qiskit/textbook/blob/main/notebooks/ch-algorithms/quantum-key-distribution.ipynb) and modified to our specific needs. The attempt of key interception can be enabled modifying the parameter Eve from False to True.
+
+<code style="color : greenyellow">aes.py</code> is the implementation of the AES encryption algorithm.
+
+<code style="color : greenyellow">main.py</code>
