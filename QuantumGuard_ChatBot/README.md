@@ -21,10 +21,9 @@ The key is generated using Kyber512 asymmetric (or public-key) method. The steps
 
 Kyber is a Post-Quantum Key Encapsualtion Method (PQ-KEM), resistant to quantum computers. It is based on Learning with Errors (Lattice) problem, which is not efficiently solvable by any quantum algorithm for now. To learn more about Kyber or PQ-KEM, take a look here: [Deep dive into a post-quantum key encapsulation algorithm](https://blog.cloudflare.com/post-quantum-key-encapsulation/)
 
-_(source: [[Deep dive into a post-quantum key encapsulation algorithm](https://github.com/Jpark99/Quantum_Security/assets/10427379/00cd9bf7-794d-424d-a32a-e14660a7c50f)]() by Kamer Vishi on ResearchGate)_
-
 ![image](https://github.com/Jpark99/Quantum_Security/assets/10427379/00cd9bf7-794d-424d-a32a-e14660a7c50f)
 
+_(source: [[Deep dive into a post-quantum key encapsulation algorithm](https://github.com/Jpark99/Quantum_Security/assets/10427379/00cd9bf7-794d-424d-a32a-e14660a7c50f)]() by Kamer Vishi on ResearchGate)_
 
 ## Guide
 
