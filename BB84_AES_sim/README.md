@@ -1,7 +1,5 @@
 <h1 align="center"> Communication Protocol Simulator based on BB84 and AES </h1>
 
-Based on 
-
 ## Description
 Simulator intended for the secure transmission of data between two parties. Initially, a private shared key is generated using the BB84 Quantum Key Distribution protocol. This key is later used to encrypt and decrypt data during its transmission. The communication protocol is intended only for quantum computers, and a quantum channel is necessary for an actual physical implementation.
 
