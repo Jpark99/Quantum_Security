@@ -17,13 +17,9 @@ The key is generated using Kyber512 asymmetric (or public-key) method. The steps
 
 1. Initially, the server generates a pair of public and private keys using Kyber512 key generation, and posts the public key for everyone.
 2. The client takes the public key and encapsulates it using Kyber512 encapsulation. The result is a private key and a ciphertext containing the private key. This ciphertext is sent to the server.
-3. The server receives the private key as ciphertext and decapsulates it to obtain the private key shared with the client. 
+3. The server receives the ciphertext and decapsulates it to obtain the private key shared with the client. 
 
-- This chatbot implementation uses scripts from https://github.com/GiacomoPope/kyber-py for Kyber512 encapsulation method
-  
-- Kyber is a Post-Quantum Key Encapsualtion Method (PQ-KEM), resistant to Quantum Computer attacks
-
-- Kyber is based on Learning with Error Lattice problem, which is not efficiently solvable by any Quantum algorithm as of now
+Kyber is a Post-Quantum Key Encapsualtion Method (PQ-KEM), resistant to quantum computers. It is based on Learning with Errors (Lattice) problem, which is not efficiently solvable by any quantum algorithm for now. To learn more about Kyber or PQ-KEM, take a look here: https://blog.cloudflare.com/post-quantum-key-encapsulation/
 
 ![image](https://github.com/Jpark99/Quantum_Security/assets/10427379/00cd9bf7-794d-424d-a32a-e14660a7c50f)
 
