@@ -1,16 +1,15 @@
-# QuantumGuard ChatBot
+<h1 align="center"> QuantumGuard ChatBot:<br/>  Next-Gen Encrypted Messaging with Kyber and ChatGPT </h1>
 
-## Next-Gen Encrypted Messaging with Kyber and ChatGPT
 
 QuantumGuard ChatBot is a secure and innovative chatbot implementation that leverages the power of Kyber512 encapsulation and ChatGPT for a next-generation encrypted communication experience.
 
 ## Features
+- **Server-client communication:** between the user (client) and the bot (server).
+- **Shared Key Generation:** Utilize the Kyber512 encapsulation method to generate shared keys between server and client, ensuring a robust encryption foundation based on the Learning With Errors (LWE) lattice problem.
 
-- **Shared Key Generation:** Utilize the Kyber512 encapsulation method to generate shared keys, ensuring a robust encryption foundation based on the Learning With Errors (LWE) lattice problem
+- **AES Encryption:** Encrypt and decrypt messages using the generated key through the Advanced Encryption Standard (AES) method.
 
-- **AES Encryption:** Encrypt and decrypt messages using the generated key through the Advanced Encryption Standard (AES)
-
-- **ChatBot Responses:** ChatBot's responses are generated using the OpenAI API
+- **ChatBot's Responses:** ChatBot's responses are generated using the OpenAI API
 
 ## Kyber
 
