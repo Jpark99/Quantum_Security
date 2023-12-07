@@ -13,19 +13,17 @@ QuantumGuard ChatBot is a secure and innovative chatbot implementation that leve
 
 ## Key generation: Kyber512
 
+The key is generated using Kyber512 asymmetric (or public-key) method. The steps are the following:
+
+1. Initially, the server generates a pair of public and private keys using Kyber512 key generation, and posts the public key for everyone.
+2. The client takes the public key and encapsulates it using Kyber512 encapsulation. The result is a private key and a ciphertext containing the private key. This ciphertext is sent to the server.
+3. The server receives the private key as ciphertext and decapsulates it to obtain the private key shared with the client. 
 
 - This chatbot implementation uses scripts from https://github.com/GiacomoPope/kyber-py for Kyber512 encapsulation method
   
 - Kyber is a Post-Quantum Key Encapsualtion Method (PQ-KEM), resistant to Quantum Computer attacks
 
 - Kyber is based on Learning with Error Lattice problem, which is not efficiently solvable by any Quantum algorithm as of now
-
-- A simple look at KEM:
-    - Alice runs KeyGen() and generates a public and private key. Alice posts the public key, and keeps the privat key to herself
-    - Bob takes Alice's public key and runs Encapsulation(), getting a shared key and a ciphertext
-    - Bob keeps the shared key to himself and sends the ciphertext to Alice
-    - Alice runs Decapsulation() on the ciphertext with her private key gets the shared key
-    - Now Alice and Bob have the same shared key
 
 ![image](https://github.com/Jpark99/Quantum_Security/assets/10427379/00cd9bf7-794d-424d-a32a-e14660a7c50f)
 
