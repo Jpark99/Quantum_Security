@@ -50,4 +50,15 @@ python client.py
 - Get talking!
 
 - To exit, simply type in "exit"
+
+## Example
+
+**Server Side**
+
+![serverphoto](https://github.com/Jpark99/Quantum_Security/assets/10427379/b96ff7ca-4034-4fae-8160-38fa520a91e0)
+
+**User Side**
   
+![clientphoto](https://github.com/Jpark99/Quantum_Security/assets/10427379/dee9285a-8222-405c-8444-4e23cb441153)
+
+
