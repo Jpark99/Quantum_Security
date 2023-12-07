@@ -1,6 +1,6 @@
 <h1 align="center"> QuantumGuard ChatBot:<br/>  Next-Gen Encrypted Messaging with Kyber and ChatGPT </h1>
 
-
+## Description
 QuantumGuard ChatBot is a secure and innovative chatbot implementation that leverages the power of Kyber512 encapsulation and ChatGPT for a next-generation encrypted communication experience.
 
 ## Features
